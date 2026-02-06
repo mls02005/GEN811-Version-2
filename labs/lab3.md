@@ -88,3 +88,4 @@ Start with the letter o ____ ls *o
 Contain the letter ‘a’ or the letter ‘c’ ____
 
 #### What command/commands would you use to find the line number in your history for the command that listed all the '.fastq' files using the absolute path. Paste your answer below.
+history | grep '/home/users/msm1094/gen711-811/shell_data/untrimmed_fastq'
