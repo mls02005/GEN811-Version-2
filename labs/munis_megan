@@ -38,3 +38,23 @@ cd = goes to home directory
 *test question: list 4 ways to change directories
 
 ls ../../ = list the files in 2 directories back
+ls .* = find hidden files
+ls -all = finds all the files (hidden and unhidden)
+ls -laF = history? 
+ls *.fastq = only display .fastq files
+ls /usr/bin/ = lists all the programs. 
+ls /usr/bin/@.sh = lists shell scripts
+ls /usr/bin/c* | wc -l = counts the words (items) in the list. 
+echo *fastq = similar to ls, shows you all the things. 
+history = prints history
+!23423 = re-runs the code from line 23423
+history | grep "word" = finds the word in the history
+less file.fastq = wraps the file
+
+tail filename.fastq = show last 10 lines
+tail -n3 filename.fastq = show last 3 lines
+
+mkdir = create a directory
+cp = copy
+cp SRR098026.fastq SRR098026-backup.fastq
+mv *backup.fastq backup/ = move backup file to backup folder
