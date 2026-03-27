@@ -50,6 +50,7 @@ The four nucleotides that appear in DNA are abbreviated A, C, T and G. Unknown n
 3. How do the search results differ when matching in one file vs. both files? If you wanted to keep the original FASTQ format, how would you get around this?
 
 4. Make a file called bad-reads.fastq made up of reads with 10 Ns or more in a row
+grep -B1 -A2 'NNNNNNNNNN' input.fastq > bad-reads.fastq
 
 ## Exercise 2
 
@@ -64,10 +65,19 @@ grep -n NNN SRR098026.fastq | wc -l
 ## Exercise 4
 
 Print the file prefix of all of the `.txt` files in our current directory.
+for fq in *fastq 
+> do 
+> basename ${fq}
+>done
 
 ## Exercise 5
 
 After renaming the fastqs as demonstrated, remove `_2026` from all of the `.txt` files.
+for filename in *_2019.txt
+do
+name=$(baesname ${filename} _2019.txt)
+mv ${filename} ${name}_2019.txt
+done
 
 ## Exercise 6
 
